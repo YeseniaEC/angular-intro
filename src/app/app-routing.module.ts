@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { TodoComponent } from './todo/todo.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'contact', component: ContactComponent}  // the open path here will redirect the page to the home component view
+  { path: 'contact', component: ContactComponent},
+  { path: 'todo', component: TodoComponent}  // the open path here will redirect the page to the home component view
 ];
 
 @NgModule({
