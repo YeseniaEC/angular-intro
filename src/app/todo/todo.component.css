@@ -1,0 +1,8 @@
+.completed {
+    text-decoration: line-through;
+    background-color: hsl(0, 0%, 75%);
+    color: darkgray;
+}
+.li-group {
+    padding: 0px;
+}
