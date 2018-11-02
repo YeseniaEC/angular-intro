@@ -11,8 +11,9 @@ import { Amiibo } from '../interfaces/amiibo';
 export class AmiiboService {
   private apiUrl = 'http://www.amiiboapi.com/api/';
 
-  public key = environment.secret_key; // this line calls in to the environments folder your secret key
-  public apiKey = environment.apiKey_; //
+  // public key = environment.secret_key;
+  // this line calls in to the environments folder your secret key
+  // public apiKey = environment.apiKey_; //
 
   constructor(private http: HttpClient ) { } // placing inside the constructor() injects the client into the services
 
