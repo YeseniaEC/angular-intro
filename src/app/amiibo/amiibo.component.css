@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Jua|Roboto');
+
+.font-header {
+    font-family: 'Jua', sans-serif;
+}
+.font-body {
+    font-family: 'Roboto', serif;
+}

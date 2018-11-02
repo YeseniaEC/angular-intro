@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HEROES } from '../mock-heroes';
+import { Hero } from '../hero';
 
 @Component({
   selector: 'app-hero-detail',
@@ -9,9 +10,22 @@ import { HEROES } from '../mock-heroes';
 })
 export class HeroDetailComponent implements OnInit {
 
-  hero: object;
+  hero: Hero;
+
   private temp: any; // this is so we can store the end part of url into a variable temporarily
+
+  newPower: string;
+
   constructor ( private route: ActivatedRoute ) { }
+
+  addPower() {
+    this.hero.powers.push(this.newPower);
+    this.newPower = '';
+  }
+
+  trackByIndex( index: number, obj: any) {
+    return index;
+  }
 
   ngOnInit ( ) {
     this.temp = this.route.params.subscribe( params => {

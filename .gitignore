@@ -1,5 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+#environments file 
+src/environments
+
 # compiled output
 /dist
 /tmp
@@ -7,6 +10,7 @@
 
 # dependencies
 /node_modules
+/package.json
 
 # IDEs and editors
 /.idea
@@ -37,3 +41,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Env Files
+/src/environments

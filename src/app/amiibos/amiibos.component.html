@@ -1,0 +1,34 @@
+<div style="margin-top: 70px;">
+  <div class="container">
+    <h1 class=" header-font text-center">Amiibos</h1>
+    <!-- <ul>
+      <li *ngFor="let amiibo of amiibos">{{ amiibo.name }}</li>
+    </ul> -->
+    <div class="col-md-3" *ngFor="let amiibo of pagedItems">
+      <div class="amiibo-body">
+        <h3 class="text-center header-font">{{ amiibo.name }}</h3>
+        <p class="text-center">From: {{ amiibo.gameSeries }}</p>
+        <div class="text-center">
+          <button class="btn btn-info"[routerLink]="['/amiibo/', amiibo.tail]">View</button>
+        </div>
+      </div>
+    </div>
+    <ul class="pagination" *ngIf="pager.pages && pager.pages.length">
+      <li [ngClass]="{disabled: pager.currentPage === 1}">
+        <a (clicK)="setPage(1)">First</a>
+      </li>
+      <li [ngClass]="{disabled: pager.currentPage === 1}">
+        <a (click)="setPage(pager.currentPage - 1)">Back</a>
+      </li>
+      <li *ngFor="let page of pager.pages" [ngClass]="{active: pager.currentPage == page}">
+        <a (click)="setPage(page)">{{ page }}</a>
+      </li>
+      <li [ngClass]="{disabled: pager.currentPage === pager.pagesCount}">
+        <a (click)="setPage(pager.currentPage + 1)">Next</a>
+      </li>
+      <li [ngClass]="{disabled: pager.currentPage === pager.pagesCount}">
+        <a (click)="setPage(pager.pagesCount)">Last</a>
+      </li>
+    </ul>
+  </div>
+</div>

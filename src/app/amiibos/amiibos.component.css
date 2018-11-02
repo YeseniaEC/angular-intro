@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Jua|Roboto');
+
+.amiibo-body {
+    background-color: paleturquoise;
+    padding: 10px;
+    margin: 10px 0; 
+    border: 2px solid pink;
+    border-radius: 5px;
+    min-height: 200px;
+}
+
+.header-font {
+    font-family: 'Jua', sans-serif;
+}
+.body-font {
+        font-family: 'Roboto', serif;
+}
